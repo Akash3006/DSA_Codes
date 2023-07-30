@@ -1,0 +1,42 @@
+//Brute Force solution  
+//Time Complexity = O(n2)
+
+int bestTimeToBuyAndSellStock(vector<int>&prices) {
+    
+    int profit,maxProfit;
+    maxProfit = 0;
+    int n = prices.size();
+
+    for(int i = 0 ;i < n;i++)
+        {
+            for(int j = i+1 ;j<n;j++)
+                {
+                    profit = prices[j]-prices[i]
+                    if( profit > maxProfit)
+                        maxProfit = profit; 
+                }
+        }
+
+    return maxProfit;
+}
+
+//Optimal solution
+int bestTimeToBuyAndSellStock(vector<int>&prices){
+    
+    int buy,maxProfit;
+
+    buy = prices[0];
+    maxProfit = 0;
+    
+    for(auto i : prices){
+        
+        if(i < buy)
+            buy = i;
+        
+        if(i - buy > maxProfit)
+            maxProfit = i- buy;
+
+    }
+
+    return maxProfit;
+}

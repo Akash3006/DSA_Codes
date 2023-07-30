@@ -1,0 +1,29 @@
+// Brute force - Use Sorting algo
+
+//Optimal Time Complexity - O(n)
+
+void sortArray(vector<int>& arr, int n){
+
+    int low,mid,high;
+
+    low = mid = 0, high = n.size()-1;
+    //Dutch Nation flag algorithm Intution 
+        
+    while(mid<=high)
+        {
+            if(arr[mid] == 0)
+                {
+                    swap(arr[low],arr[mid]);
+                    low++;
+                }
+            else if(arr[mid] == 1)
+                mid++;
+            else
+                {
+                    swap(arr[mid],arr[high]);
+                    hig--;
+                }
+        }
+
+    return arr;
+}
