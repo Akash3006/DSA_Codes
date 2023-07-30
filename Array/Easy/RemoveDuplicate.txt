@@ -1,0 +1,21 @@
+//Return the count till which disticnt element are present
+
+//Time Complexity O(n)
+int removeDuplicates(vector<int> &arr, int n) {
+
+	int left,right;
+    left = right = 0;
+
+    while(right < n){
+
+        if(arr[left] != arr[right])
+        {
+                left++;
+                swap(arr[left],arr[right]);
+        }
+
+        right++;
+    }
+
+    return left+1;
+}
