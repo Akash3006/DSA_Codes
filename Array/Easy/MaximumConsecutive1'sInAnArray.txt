@@ -1,0 +1,18 @@
+//Time Complexity - O(n)
+
+int findMaxConsecutiveOnes(vector<int>& nums) {
+       int maxLen,maxTill;
+       maxLen = maxTill = 0;
+       for(int i: nums)
+        {
+            if(i == 1)
+                ++maxTill;
+            else
+                {
+                    maxLen = max(maxLen,maxTill);
+                    maxTill = 0;
+                }
+        }
+    
+    return max(maxLen,maxTill);
+    }

@@ -1,0 +1,43 @@
+//Time Complexity 
+
+vector < int > sortedArray(vector < int > a, vector < int > b) {
+    // Write your code here
+
+    int m =a.size();
+    int n = b.size();
+    int l,r;
+    vector<int> result;
+    l = r =0;
+    while(l<m && r<n){
+
+        if(a[l] <=b[r])
+            {
+                if(result.size()==0 || result.back()!= a[l]){
+                    result.push_back(a[l]);
+                }
+                l++;
+            }        
+        else
+            {
+                if(result.size()==0 || result.back()!= b[r]){
+                    result.push_back(b[r]);
+                }
+                r++;
+            }    
+    }
+
+    while(l<m){
+        if(result.size()==0 || result.back()!= a[l]){
+                    result.push_back(a[l]);
+                }
+                l++;
+    }
+    while(r<n){
+        if(result.size()==0 || result.back()!= b[r]){
+                    result.push_back(b[r]);
+                }
+                r++;
+    }
+
+    return result;
+}
