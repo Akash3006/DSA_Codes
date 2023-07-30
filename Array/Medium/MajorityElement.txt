@@ -1,0 +1,55 @@
+//Time Complexity - O(2n) & space Complexity O(n)
+
+int majorityElement(vector<int> v){
+    int n = v.size();
+
+    map<int,int> occurenceMap;
+
+    //First Iteration
+    
+    for(auto i:v)
+        {
+            if(occurenceMap.find()!=occurenceMap.end())
+                occurenceMap[i]++;
+            else
+                occurenceMap[i] = 1;
+        }
+
+    //Second Iteration
+
+    for(auto i : v)
+        {
+            if(occurenceMap[i] * 2 > n)
+                return i;
+        }
+
+    return -1;
+
+}
+
+
+//Time Complexity - O(n)
+
+//Moore's Voting ALgorithm
+
+int majorityElement(vector<int> v){
+    
+    int element = v[0]
+    int count = 0;
+    for(auto i:num)
+        {
+            if(count==0)
+                {
+                    count = 1;
+                    element = i;
+                }
+            else if(element == i)
+                count++;
+            else
+                count--;
+
+        }
+
+    return element
+}
+

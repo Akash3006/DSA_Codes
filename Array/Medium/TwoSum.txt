@@ -1,0 +1,40 @@
+//Time Complexity - O(n2)
+
+string read(int n, vector<int> book, int target)
+{
+    // Write your code here.
+    int sum;
+   
+    for(int i = 0; i < n;i++)
+        {
+            sum = book[i];
+
+            for(int j = i+1; j< n;j++)
+                {
+                    sum+=book[j];
+                    if(sum == target)
+                        return "YES";
+                }
+            
+        }
+
+    return "NO";
+}
+
+//Time Complexity - O(n) & Space Complexity - O(n)
+
+string read(int n, vector<int> book, int target)
+{
+    // Write your code here.
+    map<int, int> sumTuple;
+    
+    for(int i = 0; i< n;i++)
+    {
+        if(sumTuple.find(target - book[i])!= sumTuple.end())
+            return "YES";
+        
+        sumTuple[book[i]] = i;
+    }
+
+    return "NO";
+}
