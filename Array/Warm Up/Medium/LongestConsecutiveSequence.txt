@@ -1,0 +1,29 @@
+//Time Complexity O(2N)
+
+int longestSuccessiveElements(vector<int>&a) {
+
+    unordered_set<int> result;
+    int count,maxlen = 1;
+    int n = a.size();
+    for(int i = 0;i<n;i++)
+        {
+            if(result.find(a[i]) == result.end())
+                result.insert(a[i]);
+        }
+    int element = a[0];
+    for(auto i : a)
+        {
+            element = i;
+            count =1;
+            while(result.find(element+1)!=result.end())
+                {
+                    count++;
+                    element+=1;
+                }
+
+            if(count > maxlen)
+                maxlen = count;
+        }
+
+    return maxlen;
+}
