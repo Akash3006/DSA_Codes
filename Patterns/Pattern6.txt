@@ -1,0 +1,63 @@
+* * * * * * * * * *
+* * * *     * * * *
+* * *         * * *
+* *             * *
+*                 *
+*                 *
+* *             * *
+* * *         * * *
+* * * *     * * * *
+* * * * * * * * * *
+
+
+
+void erect_pattern(){
+     int row = 5;
+    
+    for(int i =1;i<=row;i++)
+	 {
+        //Numbers
+        for(int j = 1; j <= i; j++)
+            cout<<"*";
+        
+        //Spaces
+        for(int k = 1; k <= 2*(row-i);k++)
+            cout<<" ";
+            
+        //Numbers
+        for(int l = i;l>=1;l--)
+            cout<<"*";
+            
+        cout<<endl;
+	}
+}
+
+void invert_pattern(){
+    int row = 5;
+    
+    for(int i =row;i>=1;i--)
+	 {
+	     
+	     //Numbers
+	     for(int l = i;l>=1;l--)
+            cout<<"*";
+            
+        //Spaces
+        for(int k = 1; k <= 2*(row-i);k++)
+            cout<<" ";
+            
+        //Numbers
+        for(int j = 1; j <= i; j++)
+            cout<<"*";
+        
+        
+            
+        cout<<endl;
+	}
+}
+
+int main(){
+    invert_pattern();
+    erect_pattern();
+    return 0;
+}
