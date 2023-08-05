@@ -37,15 +37,16 @@ void inverted_pyramid(int row){
           cout<<" ";
 
         //asteris
-        for(int k = (2*i+1); k >=0;k--)
+        for(int k = (2*i+1); k >0;k--)
           cout<<"*";
 
-      }
+        cout<<endl;
+      } 
 }
 
 int main(){
     int row = 5;
-    erect_pyramid(row):
+    erect_pyramid(row);
     inverted_pyramid(row);
     return 0;
 }
