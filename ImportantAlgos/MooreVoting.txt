@@ -1,0 +1,38 @@
+// Moore's Voting Algorithm
+
+# A number has to appear N/2 times in order to be a majority element. If it's not the case then each element 
+occurence will cancel out each other occurence eventually.
+
+N = Total number of elements 
+
+//Incase the majority element might not present occurs.
+
+1. Use Moore Voting algo.
+2.Verify the answer by again iterating over the whole array.
+
+Time Complexity - O(N) algo + O(N) verifying
+Space Complexity - O(1)
+
+//Incase the majority element is definitely present(mentioned in problem).
+
+1. User Moore Voting algo.
+
+Time Complexity - O(N)
+Space Complexity - O(1)
+
+Algo:
+1. element = a[0]
+2. count = 0
+3. for i -> 0 to N(size of array)
+    {
+4.      if element == a[i]  then count++   
+5.      else then count--
+7.      if count == 0 then element = a[i]
+    }
+//If in case no element is majority
+8. elecount = 0
+9. for i -> 0 to N
+10.   if element == v[i] then count++
+11. if elecount > N/2 then return element
+12. return -1 
+
