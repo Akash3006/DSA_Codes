@@ -1,0 +1,21 @@
+#Intution of the algorithm is that we have an array of 0,1 &2 like
+
+0-------low-1 low---mid-1 mid------------------right right+1-------->
+0,0,0,........1,1,1,.......unsorted array of 0,1&2's,2,2,2,........2
+
+1. From 0 to low-1 ------ we have 0's only
+2. From low to mid -1 ----- we have 1's only
+3. From mid to right ------ we have our unsorted array of 0,1 &2's
+4. From right+1 to end ---- we have sorted array of 2's
+
+//Algo:
+1. low = mid = 0, right = N-1(last element array index)
+2. while mid <= right
+  { 
+3. if(arr[mid] == 0) 
+    then swap(arr[low],arr[mid]) low++ & mid ++
+4. if(arr[mid] == 1)
+    then mid++;
+5. if(arr[mid] == 2)
+    then swap(arr[right],arr[mid]) right-- & mid++
+  }
