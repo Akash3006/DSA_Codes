@@ -1,7 +1,8 @@
 //Find the Maximum sum subarray  - maximum sum among all subarray
 
 //Intution - 
-1. If sum is giving -ve then reject it and starts with new element to accumulate the sum.
+1. Compare the local sum with sum accumulated.
+2. If sum is giving -ve then reject it and starts with new element to accumulate the sum.
 
 
 
