@@ -1,0 +1,31 @@
+//Rotating the array of size N to k times will cause O(N*K) Complexity.
+// In order to prevent TLE we took the GCD of (N,K) and shifting the elements in cycles.
+
+Algo:
+
+Find the GCD to have number of sets we have to shift.
+GCD(N,K)
+    {
+1.     if(b == 0) then return a
+2.     else then return GCD(b, a%b)
+    }
+
+Juggling()
+N - Number of elements
+K - Number of times array to be shifted left side
+
+1. for i = 0 -> GCD(N,K) 
+    {
+        j = i;
+2.      temp = arr[i]
+3.      while(true)
+        {
+4.          d = (j+K)%N
+5.         if(d == i) then break
+6.         arr[j] = arr[d]
+7.          j = d
+        }    
+8.      arr[j] = temp
+    }
+
+

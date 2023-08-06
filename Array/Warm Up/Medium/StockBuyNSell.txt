@@ -21,6 +21,8 @@ int bestTimeToBuyAndSellStock(vector<int>&prices) {
 }
 
 //Optimal solution
+
+//Keep the track of minimum element and take the profit using each value.
 int bestTimeToBuyAndSellStock(vector<int>&prices){
     
     int buy,maxProfit;
