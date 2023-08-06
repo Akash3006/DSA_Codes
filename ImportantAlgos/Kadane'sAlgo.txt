@@ -1,0 +1,16 @@
+//Find the Maximum sum subarray  - maximum sum among all subarray
+
+//Intution - 
+1. If sum is giving -ve then reject it and starts with new element to accumulate the sum.
+
+
+
+//Algo
+1. sum = 0,maxsum = Minimum Value
+2.for i = 0 -> N-1(last index element of array)
+    {
+3.      sum+=arr[i]
+4.      maxsum = find Maximum of (sum , maxsum)
+5.      if(sum < 0) then sum = 0
+    }
+6. return maxsum
