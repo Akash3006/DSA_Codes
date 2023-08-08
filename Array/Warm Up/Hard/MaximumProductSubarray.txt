@@ -1,0 +1,56 @@
+
+//Brute Force
+
+int subarrayWithMaxProduct(vector<int> &arr){
+	int i , j, prod,maxprod;
+	int n = arr.size();
+	i = 0;
+	maxprod = INT_MIN;
+	while(i<n)
+	{
+		prod = arr[i];
+
+		maxprod = max(prod,maxprod);
+		
+		if (prod != 0)
+		{
+			j = i+1;
+			
+			while (j < n)
+			{
+				prod*=arr[j];
+
+				if(prod!=0)
+				{
+					maxprod = max(prod,maxprod);
+					j++;
+				}
+				else
+					break;			
+
+			}
+        }
+		i++;
+    }
+
+	return maxprod;
+}
+
+//Optimal
+1. Take prefix product.
+    1.1 If prefix products to 0 then start again
+2. Take suffix product.
+    2.1 If suffix products to 0 then start again
+3. Compare the max predix/suffix Product.
+
+MaximumProduct():
+1.prefix = suffix = 1,maxprod = INT_MIN/any least value
+2.for i =0 -> N
+    {
+3.      if(prefix == 0) then prefix = 1
+4.      if(suffix == 0) then suffix = 1
+5.      prefix *= arr[i]
+6.      suffix *= arr[i]
+7.      maxprod = max(maxprod , max(prefix,suffix))  
+    }
+8. return maxprod

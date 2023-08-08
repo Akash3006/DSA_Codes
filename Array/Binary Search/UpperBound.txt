@@ -1,0 +1,15 @@
+//Lower Bound is the smallest index of the element in an array which is strictly greater than the target element
+
+
+
+//Prog 1
+
+upperBound():
+1. low = 0, high - N-1,mid,index = N(incase element is greater than target and does not exists in the array)
+2.    while()
+    {        
+3.    mid =   mid = low + (high - low)/2 
+4.      if(target > arr[mid]) then ans = index & high = mid -1
+5.      else low = mid +1
+    }
+6. return index;

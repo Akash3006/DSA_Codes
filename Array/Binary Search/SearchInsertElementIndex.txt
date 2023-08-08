@@ -1,0 +1,12 @@
+//Specifically to find out the lower bound for this question.
+
+lowerBound():
+1. low = 0,high = N-1,mid
+2.while(low<=high)
+    {
+3       mid = low + (high - low)/2
+4.      if(arr[mid] == target) then return mid
+5.      else if(target > arr[mid]) then low = mid +1
+6.      else high = mid -1;
+    } 
+7. return low

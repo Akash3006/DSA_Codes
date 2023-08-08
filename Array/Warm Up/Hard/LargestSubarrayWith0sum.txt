@@ -1,0 +1,12 @@
+//Prefix sum algo
+
+LongestSubarrayWithSum0():
+1. prefixSum,maxlen = 0, sumDict(dictionary/hashmap)
+2. for i -> 0 to N
+    {
+3.      prefixSum+=arr[i]
+4.      if(prefixSum == 0) then maxlen = max(i+1,maxlen)
+5.      else if (sumDict contains (prefixSum - 0)) then maxlen = max(i - sumDict[prefixSum],maxlen)
+6.      else then add prefixSum to dictionary(sumDict[prefixSum] = i)
+    }
+7. return maxlen
