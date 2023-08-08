@@ -1,0 +1,10 @@
+EvenOrOdd():
+1. Perform bitwise & between N and 1
+    1.1 If the result is zero then N is even.
+    1.2 If the result is not zero the N is odd.
+//Prog
+int result = N & 1;
+if(result)
+    then odd;
+else
+    even

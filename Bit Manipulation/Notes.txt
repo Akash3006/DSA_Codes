@@ -1,0 +1,30 @@
+
+-2^n to (2^n)-1
+// n = total bits
+
+byte - 8 bits - numbers can be upto -2^7 to (2^8) - 1 range
+short - 16 - numbers can be upto -2^16 to (2^16) - 1 range
+int - 32 - numbers can be upto -2^32 to (2^32) - 1 range
+long - 64 -numbers can be upto -2^64 to (2^64) -1 range
+
+2's complement =>  1's complement + binary of 1
+
+Binary to Decimal Conversion 
+
+Steps to find the 2's complement:
+
+1. Check the MSB 
+    1.1 If MSB is 0 then simply convert binary to decimal
+    1.2 If MSB is 1 then:
+        1.2.1 Take the 1's complement of binary
+        1.2.2 Add 1 in binary to int
+        1.2.3 Convert the final binary to decimal
+        1.2.4 Apply -ve sign
+
+Decimal to binary Conversion
+
+-ve numbers
+
+1. Convert simple binary ignoring -ve sign
+2. Take 2's complement 
+3. Fit in bits(common for both +ve and -ve numbers)

@@ -1,0 +1,10 @@
+Swap():
+1. Xor between a and b save it into a.
+2. Xor between a and b save it into b.
+3. Xor between a and b save it into a.
+
+
+//Prog
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;

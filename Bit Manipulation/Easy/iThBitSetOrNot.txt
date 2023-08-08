@@ -1,0 +1,13 @@
+CheckIthBitSetOrNot(kth bit):
+1. Create a mask by doing left shif of 1 to k times
+2. Apply & between mask and the given number 
+    2.1 If the result is 0 then kth bit was not set.
+    2.2 If the result is 1 then kth bit was set.
+
+
+//Prog
+1. mask = 1<<k
+2. result = N & mask
+3. if result == 0 then kth bit is not set
+4. else kth bit is set 
+
