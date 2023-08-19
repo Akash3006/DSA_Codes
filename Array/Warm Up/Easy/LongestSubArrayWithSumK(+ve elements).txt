@@ -1,5 +1,8 @@
 //Time Complexity - O()
 
+//Edge case - sum  = 0
+No element found 
+
 int longestSubarrayWithSumK(vector<int> a, long long k) {
     // Write your code here
     long long sum = a[0];
