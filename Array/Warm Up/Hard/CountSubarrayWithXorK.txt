@@ -1,0 +1,16 @@
+// Find x is present or not in array each for which xor ^ k 
+    :xor of elements till ith
+
+
+find():
+
+1.xora = 0
+2.count = 0
+3.dict[xora] = 1;
+4.for i = 0 ---> n-1
+    4.1 xora ^= a[i]
+    4.2 xorb = xora ^ k
+    4.3 count = ++dict[xorb]
+    4.4 dict[xora] = 1
+
+5.return count

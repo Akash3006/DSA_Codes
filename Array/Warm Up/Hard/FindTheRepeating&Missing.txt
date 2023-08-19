@@ -1,0 +1,33 @@
+//Optimal Approach 1(Mathematical)
+
+1. Find the sum of n natural numbers and array elements
+    s1 = n * (n+1) / 2
+    sa1 = a[0]+a[1]+........a[n-1]
+
+2.Find the sum of squares of n natural numbers and array elements
+    
+    sq = ( n * (n + 1) * (2 * n + 1) ) / 6
+    sq1 = a[0] * a[0] + a[1] * a[1] + ........ + a[n-1] * a[n-1]
+
+3.Find X-Y(s1 - sa1)
+
+    val1 = s1 - sa1(X-Y) ----------------------------------------------------eq 1
+
+4.Find X2 - Y2(sq - sq1)// (X-Y)(X+Y) = value2
+
+    val3 = val2/val1 //(X + Y) = val3-------------------------------------eq 2
+
+5.Find X 
+
+    Sum of eq 1 and eq 2
+    X = (val1 + val3) / 2 // X-Y + X + Y = va1 + val3
+                          // 2X =  va1 + val3
+                          // X = (val1 + va3)/2
+
+6.Find Y
+
+    from eq 1
+    Y = X - val1
+
+
+//Optimal Approach 2(XOR)
