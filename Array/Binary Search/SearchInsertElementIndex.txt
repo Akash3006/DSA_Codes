@@ -1,5 +1,7 @@
 //Specifically to find out the lower bound for this question.
 
+//Applicable in case of distinct values
+
 lowerBound():
 1. low = 0,high = N-1,mid
 2.while(low<=high)
@@ -10,3 +12,15 @@ lowerBound():
 6.      else high = mid -1;
     } 
 7. return low
+
+//If duplicate values are present then use 
+
+1. low = 0,high = N-1,mid,index = -1
+
+2.while(low<=high)
+    {
+3       mid = low + (high - low)/2
+4.      if(arr[mid] >= target) then index = mid, high = mid - 1
+5.      else then low = mid + 1
+    } 
+6. return index
