@@ -1,0 +1,9 @@
+//Find the minimum of all and replace it with i'th value
+
+for i = 0 to n-1:
+    min = i
+    for j = i+1 to n:
+        if(arr[j] < arr[min])
+            min = j
+    swap(arr[i] ,arr[min])
+     

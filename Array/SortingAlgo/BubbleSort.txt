@@ -1,0 +1,5 @@
+// Complexity - O(N2)
+
+1.for i = 0 to N:
+2.    for j = i+1 to N:
+3.        if(a[i] > a[j]) then swap(a[i],a[j])
