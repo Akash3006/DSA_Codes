@@ -1,6 +1,6 @@
 //Worst case complexity - O(N2)
 
-for i =0 to N:
+for i =1 to N:
     key = arr[i]
     j = i - 1
 

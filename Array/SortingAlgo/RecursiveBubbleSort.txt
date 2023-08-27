@@ -1,0 +1,46 @@
+//Dswap is used to optimise it in case the array passed is already sorted
+
+int Swapping(vector<int> &a,int i,int j,int n){
+    
+    int dswap = 0;
+    
+    while( j < n)
+        {
+            if(a[i] > a[j])
+                {
+                    swap(a[i],a[j]);
+                    dswap = 1;
+                    
+                }
+            j++;
+        }
+        
+        return dswap;
+}
+void BBS(vector<int> &a,int i ,int j,int n){
+    
+    int dswap = 0;
+    
+    if(i == n-2)
+        {
+            if(a[i] > a[j])
+                swap(a[i],a[j]);
+            return;
+        }
+        
+    dswap = Swapping(a,i,j,n);
+    
+    if(dswap == 0)
+        return;
+        
+    BBS(a,i+1,i+2,n);
+}
+
+int main() {
+    // Write C++ code here
+    vector<int> arr = {1,2,3,4,5};
+    BBS(arr,0,1,5);
+    for(auto i : arr)
+        cout<<i<<" ";
+    return 0;
+}
