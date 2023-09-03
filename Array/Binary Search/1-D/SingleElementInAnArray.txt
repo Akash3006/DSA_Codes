@@ -1,0 +1,22 @@
+int singleNonDuplicate(vector<int>& arr)
+{
+	int low = 0, high = arr.size() - 1;
+	int mid;
+
+    while (low < high) {
+        mid = low + (high - low) / 2;
+
+        // Ensure mid is an even index
+        if (mid % 2 == 1) {
+            mid--;  // Move mid to the previous even index
+        }
+
+        if (arr[mid] == arr[mid + 1]) {
+            low = mid + 2; // The single element is on the right side
+        } else {
+            high = mid; // The single element is on the left side
+        }
+    }
+
+    return arr[low];
+}
