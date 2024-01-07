@@ -1,0 +1,12 @@
+//This algorithm is to find out the greatest common divisor of two numbers.
+int GCD(int a ,int b)
+{
+    if(b==0)
+        return a;
+    
+    return GCD(b,a%b);
+}
+int main() {
+    cout<<GCD(16,4);
+    return 0;
+}
